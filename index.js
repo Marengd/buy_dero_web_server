@@ -25,6 +25,10 @@ const paypalClient = new paypal.core.PayPalHttpClient( new Environment(clientID,
 //Set it to zero to disable the service fee
 const serviceFeePercentage = 2;
 
+app.get("/test", (req, res) => {
+  res.send("<h1>Buy Dero Server is online.</h1>")
+})
+
 var exchangeRate;
 function getExchangeRate () {
   let config = {
